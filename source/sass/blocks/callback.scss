@@ -4,19 +4,62 @@
   background: $gradient-bcg;
   position: relative;
 
+  @media (max-width: $tablet-width) {
+    min-height: 380px;
+  }
+
   &::before {
 
-    @supports not (content: url("../img/callback-girl.webp")) {
-      content: url("../img/callback-girl.png");
+    @supports not (background-image: url("../img/callback-girl.webp")) {
+      background-image: url("../img/callback-girl.png");
     }
 
-    content: url("../img/callback-girl.webp");
-    position: absolute;
+    background-image: url("../img/callback-girl.webp");
+    background-repeat: no-repeat;
+    content: "";
     width: 352px;
     height: 474px;
-    right: calc((100% - 886px)/2);
-    top: 31px;
+    position: absolute;
+    right: calc((100% - 886px) / 2);
+    bottom: -148px;
     z-index: 3;
+
+    @include retina {
+
+      @supports not (background-image: url("../img/callback-girl@2x.webp")) {
+        background-image: url("../img/callback-girl@2x.png");
+      }
+
+      width: 352px;
+      height: 474px;
+      background-size: cover;
+      background-image: url("../img/callback-girl@2x.webp");
+    }
+
+    @media (max-width: $tablet-width) {
+
+      @supports not (background-image: url("../img/callback-girl-tab.webp")) {
+        background-image: url("../img/callback-girl-tab.png");
+      }
+
+      width: 306px;
+      height: 330px;
+      bottom: 0;
+      right: calc((100% - 736px) / 2);
+      background-image: url("../img/callback-girl-tab.webp");
+    }
+
+    @include retina {
+
+      @supports not (background-image: url("../img/callback-girl-tab@2x.webp")) {
+        background-image: url("../img/callback-girl-tab@2x.png");
+      }
+
+      width: 306px;
+      height: 330px;
+      background-size: cover;
+      background-image: url("../img/callback-girl-tab@2x.webp");
+    }
   }
 }
 
@@ -26,6 +69,11 @@
   padding-top: 86px;
   position: relative;
   z-index: 2;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 35px;
+    padding-top: 90px;
+  }
 
   p {
     @include font($raleway, 20px, 28px, 800, normal);

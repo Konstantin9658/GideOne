@@ -2,6 +2,10 @@
   flex: 0 0 auto;
   min-height: 266px;
   background-color: $dark-cyan;
+
+  @media (max-width: $tablet-width) {
+    min-height: 257px;
+  }
 }
 
 .footer__wrapper {
@@ -12,6 +16,10 @@
   align-items: center;
   flex-direction: column;
   padding: 61px 0 51px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 52px;
+  }
 
   a {
     color: $main-white;

@@ -1,6 +1,10 @@
 .how-work {
   background: $gradient-bcg;
   min-height: 883px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 868px;
+  }
 }
 
 .how-work__wrapper {
@@ -8,6 +12,11 @@
   width: 100%;
   margin: 0 auto;
   padding: 98px 0 72px;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    padding-bottom: 67px;
+  }
 
   h2 {
     max-width: 438px;
@@ -24,6 +33,10 @@
   grid-template-rows: auto;
   column-gap: 30px;
   row-gap: 5px;
+
+  @media (max-width: $tablet-width) {
+    justify-items: center;
+  }
 }
 
 .how-work__features-item {
@@ -34,6 +47,11 @@
   width: 400px;
   min-height: 285px;
   padding: 24px 61px 33px;
+
+  @media (max-width: $tablet-width) {
+    width: 278px;
+    padding: 12px 3px 33px;
+  }
 
   h3,
   p {
@@ -59,5 +77,9 @@
   &--small {
     height: 65px;
     margin-bottom: 26px;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 30px;
+    }
   }
 }
