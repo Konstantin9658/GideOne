@@ -11,6 +11,18 @@
     border: 3px solid $cyan;
     width: 161px;
     min-height: 41px;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $moderate-cyan;
+      background-color: $moderate-cyan;
+      color: $main-white;
+      transition: $trans--300;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   &--slider {
@@ -25,5 +37,9 @@
     &:active {
       opacity: 0.7;
     }
+  }
+
+  &--burger {
+    border: none;
   }
 }

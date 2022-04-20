@@ -8,5 +8,9 @@
     @include font($drina, 73px, 74px, 400, normal);
     color: $very-dark-cyan;
     margin: 0;
+
+    @media (max-width: $tablet-width) {
+      @include resize-txt(65px, 66px);
+    }
   }
 }

@@ -16,22 +16,18 @@
     &:hover,
     &:focus-visible {
       transition: $trans--300;
-      background: none;
-      border: 3px solid $cyan;
-      color: $cyan;
+      background: linear-gradient(273.2deg, #1696A7 4.98%, #4AFDCC 156.06%);
     }
   }
 
   &--about {
     border: 3px solid $cyan;
     color: $cyan;
-    transition: $trans--300;
 
     &:hover,
     &:focus-visible {
-      background: $btn-order;
-      color: $main-white;
-      border: transparent;
+      background: $light-cyan;
+      border: none;
     }
   }
 

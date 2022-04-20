@@ -62,9 +62,13 @@ gulp.task("images", function() {
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo({
         plugins: [
-          {
-            removeViewBox: false,
-          }
+          { optimizationLevel: 3 },
+          { minifyStyles: false },
+          { progessive: true },
+          { interlaced: true },
+          { removeViewBox: false },
+          { removeUselessStrokeAndFill: false },
+          { cleanupIDs: false }
         ]
       })
     ]))

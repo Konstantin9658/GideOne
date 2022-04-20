@@ -1,5 +1,5 @@
 .rates {
-  padding: 92px 0 90px;
+  padding: 92px 20px 90px;
 
   h2 {
     width: 202px;
@@ -10,8 +10,20 @@
 
 .rates__list {
   @include reset-list;
-  display: flex;
-  flex-flow: row wrap;
+  transition: $trans--300;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(266px, 266px));
+  grid-template-rows: auto;
+  column-gap: 37px;
+  row-gap: 20px;
+
+  @media (min-width: 768px) and (max-width: 1220px) {
+    grid-template-columns: repeat(auto-fit, minmax(266px, 296px));
+    width: 612px;
+    margin: 0 auto;
+    gap: 20px;
+  }
 }
 
 .rates__item {
@@ -20,13 +32,14 @@
   align-items: center;
   width: 266px;
   min-height: 370px;
-  margin-right: 37px;
   border: 1px solid $border-color;
   padding: 60px 20px 42px;
   text-align: center;
 
-  &:nth-child(4n + 4) {
-    margin-right: 0;
+  @media (max-width: $tablet-width) {
+    width: 296px;
+    min-height: 319px;
+    padding: 35px 31px 36px;
   }
 
   p {
@@ -34,6 +47,10 @@
     margin: 0;
     color: $cyan;
     padding-bottom: 12px;
+
+    @media (max-width: $tablet-width) {
+      padding-bottom: 11px;
+    }
   }
 
   svg {
