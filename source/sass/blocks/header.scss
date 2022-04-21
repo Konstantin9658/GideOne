@@ -20,9 +20,22 @@
     position: relative;
   }
 
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
+
   img {
     margin-right: 29px;
-  }
+
+    @media (max-width: $tablet-width) {
+      margin-right: auto;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 79px;
+      height: 36px;
+    }
+   }
 
   button {
     display: none;
@@ -35,6 +48,12 @@
       cursor: pointer;
       right: 34px;
     }
+
+    @media (max-width: $mobile-width) {
+      width: 30px;
+      height: 30px;
+      right: 0;
+    }
   }
 }
 
@@ -42,11 +61,6 @@
   margin-right: auto;
   background: radial-gradient(51.16% 8231.72% at 50.07% 50%, $main-white 0%, rgba($main-black, 0) 100%);
   position: relative;
-
-  @media (max-width: $tablet-width) {
-    width: 52%;
-    margin-right: auto;
-  }
 }
 
 .header__nav-list {
@@ -57,6 +71,7 @@
 
   @media (max-width: $tablet-width) {
     transform: translateY(-100px);
+    display: none;
   }
 }
 
@@ -81,12 +96,29 @@
   margin-right: 83px;
   position: relative;
 
+  @media (max-width: $tablet-width) {
+    margin-right: 88px;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include resize-txt(9px, 11px);
+    margin-right: 38px;
+  }
+
   &::before {
     position: absolute;
-    content: url("../img/icon/phone.svg");
+    content: "";
+    background-image: url("../img/icon/phone.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 15px;
     height: 15px;
     left: -22px;
     top: -1px;
+
+    @media (max-width: $mobile-width) {
+      width: 10px;
+      height: 10px;
+    }
   }
 }

@@ -35,7 +35,7 @@
     width: 300px;
 
     @media (max-width: $tablet-width) {
-      padding-bottom: 33px;
+      padding-bottom: 37px;
       margin: 0 auto;
     }
   }
@@ -71,8 +71,14 @@
   flex-direction: column;
   margin-bottom: 30px;
 
-  &:last-child {
-    margin-right: 0;
+  // &:last-child {
+  //   margin-right: 0;
+  // }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 32.5px;
+    text-align: left;
+    margin-bottom: 17px;
   }
 
   p {
@@ -98,4 +104,9 @@
   height: 30px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding: 0 20px;
+  }
 }

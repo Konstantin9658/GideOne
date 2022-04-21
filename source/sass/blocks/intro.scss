@@ -7,6 +7,10 @@
     min-height: 1028px;
   }
 
+  @media (max-width: $mobile-width) {
+    min-height: 581px;
+  }
+
   &::after,
   &::before {
     position: absolute;
@@ -47,6 +51,12 @@
       padding-bottom: 19px;
     }
 
+    @media (max-width: $mobile-width) {
+      @include resize-txt(20px, 23px);
+      letter-spacing: -0.1px;
+      padding-bottom: 14px;
+    }
+
     span {
       @include font($drina, 100px, 125px, 400, normal);
       color: $light-red;
@@ -54,6 +64,10 @@
 
       @media (max-width: $tablet-width) {
         @include resize-txt(80px, 103px);
+      }
+
+      @media (max-width: $mobile-width) {
+        @include resize-txt(40px, 49px);
       }
     }
   }
@@ -71,8 +85,14 @@
 
     @media (max-width: $tablet-width) {
       text-align: center;
-      width: 646px;
+      max-width: 646px;
+      width: 100%;
       margin: 0 auto;
+    }
+
+    @media (max-width: $mobile-width) {
+      @include resize-txt(12px, 14px);
+      letter-spacing: -0.1px;
     }
   }
 }
@@ -87,6 +107,10 @@
     margin-left: 0;
     text-align: center;
     padding-top: 54px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 9px;
   }
 }
 
@@ -104,6 +128,13 @@
     top: 16px;
     left: 6px;
   }
+
+  @media (max-width: $mobile-width) {
+    width: 234px;
+    height: 234px;
+    left: 0;
+    top: 4px;
+  }
 }
 
 .intro__features-list {
@@ -113,8 +144,15 @@
   @media (max-width: $tablet-width) {
     padding-left: 73px;
     text-align: left;
-    width: 728px;
+    max-width: 728px;
+    width: 100%;
     margin: 39px auto 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 453px;
+    margin: 16px auto 8px;
+    padding-left: 16px;
   }
 }
 
@@ -122,6 +160,11 @@
   @include font($raleway, 16px, 19px, 800, normal);
   color: $very-dark-cyan;
   padding-bottom: 14px;
+
+  @media (max-width: $mobile-width) {
+    @include resize-txt(12px, 14px);
+    padding-bottom: 12px;
+  }
 }
 
 .intro__links {
@@ -130,8 +173,18 @@
 
   @media (max-width: $tablet-width) {
     margin-top: 50px;
-    width: 463px;
+    max-width: 463px;
+    width: 100%;
     margin: 0 auto;
     justify-content: space-between;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    padding: 0 5px;
+
+    a {
+      margin-bottom: 12px;
+    }
   }
 }
