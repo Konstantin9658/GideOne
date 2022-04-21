@@ -8,6 +8,10 @@
     min-height: 380px;
   }
 
+  @media (max-width: $mobile-width) {
+    min-height: 339px;
+  }
+
   &::before {
 
     @supports not (background-image: url("../img/callback-girl.webp")) {
@@ -37,34 +41,47 @@
     }
 
     @media (max-width: $tablet-width) {
-
-      @supports not (background-image: url("../img/callback-girl-tab.webp")) {
-        background-image: url("../img/callback-girl-tab.png");
-      }
-
-      width: 306px;
-      height: 330px;
-      bottom: 0;
-      right: calc((100% - 736px) / 2);
-      background-image: url("../img/callback-girl-tab.webp");
-    }
-
-    @include retina {
-
-      @supports not (background-image: url("../img/callback-girl-tab@2x.webp")) {
-        background-image: url("../img/callback-girl-tab@2x.png");
-      }
-
       width: 306px;
       height: 330px;
       background-size: cover;
-      background-image: url("../img/callback-girl-tab@2x.webp");
+      bottom: 0;
+      right: calc((100% - 736px) / 2);
     }
+
+    @media (max-width: $mobile-width) {
+      width: 151px;
+      height: 163px;
+      background-size: cover;
+      right: calc((100% - 264px) / 2);
+    }
+
+    //   @supports not (background-image: url("../img/callback-girl-tab.webp")) {
+    //     background-image: url("../img/callback-girl-tab.png");
+    //   }
+
+    //   width: 306px;
+    //   height: 330px;
+    //   bottom: 0;
+    //   right: calc((100% - 736px) / 2);
+    //   background-image: url("../img/callback-girl-tab.webp");
+    // }
+
+    // @include retina {
+
+    //   @supports not (background-image: url("../img/callback-girl-tab@2x.webp")) {
+    //     background-image: url("../img/callback-girl-tab@2x.png");
+    //   }
+
+    //   width: 306px;
+    //   height: 330px;
+    //   background-size: cover;
+    //   background-image: url("../img/callback-girl-tab@2x.webp");
+    // }
   }
 }
 
 .callback__wrapper {
-  width: 350px;
+  max-width: 350px;
   margin-left: 205px;
   padding-top: 86px;
   position: relative;
@@ -75,11 +92,24 @@
     padding-top: 90px;
   }
 
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 49px;
+  }
+
   p {
     @include font($raleway, 20px, 28px, 800, normal);
     color: $light-red;
     margin: 0;
     padding-bottom: 67px;
+
+    @media (max-width: $mobile-width) {
+      @include resize-txt(14px, 17px);
+      padding-bottom: 21px;
+    }
   }
 
   &::before {

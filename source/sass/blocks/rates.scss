@@ -5,6 +5,11 @@
     padding-bottom: 88px;
   }
 
+  @media (max-width: $mobile-width) {
+    padding-top: 49px;
+    padding-bottom: 46px;
+  }
+
   h2 {
     width: 202px;
     margin: 0 auto;
@@ -13,6 +18,10 @@
     @media (max-width: $tablet-width) {
       text-align: center;
       padding-bottom: 51px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 34px;
     }
   }
 }
@@ -33,6 +42,11 @@
     margin: 0 auto;
     gap: 20px;
   }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: repeat(auto-fit,minmax(243px,243px));
+    row-gap: 15px;
+  }
 }
 
 .rates__item {
@@ -51,6 +65,12 @@
     padding: 35px 31px 36px;
   }
 
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    min-height: 249px;
+    padding: 18px 21px 22px;
+  }
+
   p {
     @include font($raleway, 18px, 21px, 700, normal);
     margin: 0;
@@ -60,11 +80,21 @@
     @media (max-width: $tablet-width) {
       padding-bottom: 11px;
     }
+
+    @media (max-width: $mobile-width) {
+      @include resize-txt(14px, 16px);
+      padding-bottom: 15px;
+    }
   }
 
   svg {
     fill: none;
     margin-bottom: 12px;
+
+    @media (max-width: $mobile-width) {
+      height: 67px;
+      margin-bottom: 15px;
+    }
   }
 
   a {
@@ -73,8 +103,13 @@
 
     @media (max-width: $tablet-width) {
       margin-top: 31px;
-      width: 233px;
+      width: 100%;
       min-height: 41px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-top: 15px;
+      min-height: 32px;
     }
   }
 
@@ -83,6 +118,10 @@
     svg {
       position: relative;
       right: 10px;
+
+      @media (max-width: $mobile-width) {
+        right: 0;
+      }
     }
   }
 

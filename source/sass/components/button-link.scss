@@ -42,6 +42,10 @@
 
   &--callback {
     width: 333px;
+
+    @media (max-width: $mobile-width) {
+      width: 100%;
+    }
   }
 
   &--about,

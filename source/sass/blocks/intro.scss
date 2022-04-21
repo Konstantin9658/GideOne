@@ -8,7 +8,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    min-height: 581px;
+    min-height: 587px;
+    overflow: hidden;
   }
 
   &::after,
@@ -24,6 +25,11 @@
     filter: blur(240px);
     right: 24px;
     bottom: 0;
+
+    @media (max-width: $mobile-width) {
+      width: 328px;
+      height: 328px;
+    }
   }
 
   &::before {
@@ -34,6 +40,11 @@
     bottom: 119px;
     right: 119px;
     z-index: 1;
+
+    @media (max-width: $mobile-width) {
+      width: 92px;
+      height: 92px;
+    }
   }
 
   h1,
