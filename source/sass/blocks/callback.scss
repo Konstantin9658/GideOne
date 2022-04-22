@@ -54,29 +54,6 @@
       background-size: cover;
       right: calc((100% - 264px) / 2);
     }
-
-    //   @supports not (background-image: url("../img/callback-girl-tab.webp")) {
-    //     background-image: url("../img/callback-girl-tab.png");
-    //   }
-
-    //   width: 306px;
-    //   height: 330px;
-    //   bottom: 0;
-    //   right: calc((100% - 736px) / 2);
-    //   background-image: url("../img/callback-girl-tab.webp");
-    // }
-
-    // @include retina {
-
-    //   @supports not (background-image: url("../img/callback-girl-tab@2x.webp")) {
-    //     background-image: url("../img/callback-girl-tab@2x.png");
-    //   }
-
-    //   width: 306px;
-    //   height: 330px;
-    //   background-size: cover;
-    //   background-image: url("../img/callback-girl-tab@2x.webp");
-    // }
   }
 }
 
