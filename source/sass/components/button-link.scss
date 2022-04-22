@@ -55,4 +55,31 @@
       opacity: 0.5;
     }
   }
+
+  &--more {
+    @include font($raleway, 16px, 19px, 700, normal);
+    color: $cyan;
+    @include flex-center;
+    border: 3px solid $cyan;
+    width: 161px;
+    min-height: 41px;
+
+    @media (max-width: $mobile-width) {
+      @include resize-txt(14px, 16px);
+      min-height: 31px;
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: $moderate-cyan;
+      background-color: $moderate-cyan;
+      color: $main-white;
+      transition: $trans--300;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
 }
