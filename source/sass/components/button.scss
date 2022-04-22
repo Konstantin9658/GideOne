@@ -12,6 +12,12 @@
     width: 161px;
     min-height: 41px;
 
+    @media (max-width: $mobile-width) {
+      @include resize-txt(14px, 16px);
+      min-height: 31px;
+      width: 100%;
+    }
+
     &:hover,
     &:focus-visible {
       border-color: $moderate-cyan;

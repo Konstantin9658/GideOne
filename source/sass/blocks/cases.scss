@@ -9,7 +9,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 47px;
+    padding: 47px 0 73px;
+    min-height: 363px;
   }
 }
 
@@ -31,6 +32,10 @@
     margin-left: 0;
     width: 100%;
     text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 244px;
   }
 
   h2 {
@@ -63,6 +68,7 @@
 
     @media (max-width: $mobile-width) {
       @include resize-txt(14px, 16px);
+      padding-bottom: 17px;
     }
   }
 }
@@ -70,6 +76,10 @@
 .cases__list {
   @include reset-list;
   display: flex;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 7px;
+  }
 }
 
 .cases__item {
@@ -88,12 +98,24 @@
     margin-bottom: 17px;
   }
 
+  @media (max-width: $mobile-width) {
+    background-color: transparent;
+    min-width: 218px;
+    min-height: 115px;
+    padding: 0;
+    margin-right: 16px;
+  }
+
   p {
     margin: 0;
     @include font($raleway, 20px, 23px, 600, normal);
     color: $main-black;
     padding-bottom: 23px;
     flex-grow: 1;
+
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
   }
 }
 
@@ -102,6 +124,16 @@
   height: 135px;
   margin-bottom: 24px;
   background-color: #f0f0f0;
+
+  @media (max-width: $mobile-width) {
+    width: 218px;
+    height: 69px;
+    margin-bottom: 15px;
+
+    img {
+      height: 69px;
+    }
+  }
 }
 
 .cases__controls {
@@ -115,5 +147,9 @@
   @media (max-width: $tablet-width) {
     width: 100%;
     padding: 0 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
   }
 }
