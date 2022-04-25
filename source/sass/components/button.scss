@@ -3,9 +3,10 @@
   appearance: none;
   background: transparent;
   padding: 0;
+  border: none;
 
   &--slider {
-    border: none;
+
 
     &:hover,
     &:focus-visible {
@@ -19,7 +20,9 @@
   }
 
   &--burger {
-    border: none;
+    // border: none;
+    background-image: url("../img/icon/burger.svg");
+    background-repeat: no-repeat;
 
     @media (max-width: $mobile-width) {
 
@@ -28,5 +31,11 @@
         height: 30px;
       }
     }
+  }
+
+  &--close {
+    background-image: url("../img/icon/close.svg");
+    z-index: 45;
+    background-size: cover;
   }
 }

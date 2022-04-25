@@ -9,8 +9,8 @@
   }
 }
 
-.header__logo {
-  margin-right: 43px;
+.header__logo-link {
+  margin-right: auto;
 }
 
 .header__wrapper {
@@ -22,25 +22,21 @@
 
   @media (max-width: $tablet-width) {
     padding: 0 23px;
-    position: relative;
+    // position: relative;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 0;
+    padding: 0 5px;
   }
 
   img {
-    margin-right: 29px;
-
-    @media (max-width: $tablet-width) {
-      margin-right: auto;
-    }
+    margin-right: auto;
 
     @media (max-width: $mobile-width) {
       width: 79px;
       height: 36px;
     }
-   }
+  }
 
   button {
     display: none;
@@ -57,7 +53,7 @@
     @media (max-width: $mobile-width) {
       width: 30px;
       height: 30px;
-      right: 0;
+      right: 8px;
     }
   }
 }
@@ -65,7 +61,14 @@
 .header__nav {
   margin-right: auto;
   background: radial-gradient(51.16% 8231.72% at 50.07% 50%, $main-white 0%, rgba($main-black, 0) 100%);
-  position: relative;
+  // position: relative;
+
+  @media (max-width: $tablet-width) {
+    background: none;
+    transform: translateY(-100px);
+    background-color: $light-cyan;
+    opacity: 0;
+  }
 }
 
 .header__nav-list {
@@ -75,8 +78,11 @@
   align-items: center;
 
   @media (max-width: $tablet-width) {
-    transform: translateY(-100px);
-    display: none;
+    flex-direction: column;
+    overflow: auto;
+    height: 70%;
+    position: fixed;
+    width: 100%;
   }
 }
 
@@ -84,9 +90,20 @@
   @include font($raleway, 12px, 14px, 600, normal);
   margin-right: 48px;
 
+  @media (max-width: $tablet-width) {
+    min-height: 40px;
+    margin-right: 0;
+    border-bottom: 2px solid rgba(191, 190, 190, 0.1);
+    @include flex-center;
+    width: 100%;
+  }
+
   a {
     color: $dark-cyan;
-    @include hover;
+
+    @media (min-width: $desktop-width) {
+      @include hover;
+    }
 
     &:active {
       opacity: 0.7;
@@ -135,5 +152,33 @@
       left: -17px;
       top: 0px;
     }
+  }
+}
+
+.header__nav--show {
+
+  @media (max-width: $tablet-width) {
+    transform: translateX(0);
+    transition: $trans--300;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $light-cyan;
+    position: absolute;
+    z-index: 40;
+    padding: 55px 0;
+
+    // .header__nav-list {
+    //   flex-direction: column;
+    //   overflow: auto;
+    //   height: 64%;
+    //   overflow: auto;
+    //   height: 70%;
+    //   position: fixed;
+    //   width: 100%;
+    // }
   }
 }

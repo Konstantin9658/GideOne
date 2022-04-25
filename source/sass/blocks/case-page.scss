@@ -6,8 +6,16 @@
   align-items: center;
   margin-bottom: 68px;
 
+  @media (max-width: $mobile-width) {
+    min-height: 72px;
+  }
+
   .case-page__container {
     margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
   }
 }
 
@@ -17,6 +25,15 @@
   max-width: 721px;
   width: 100%;
   margin: 0;
+
+  @media (max-width: $tablet-width) {
+    @include resize-txt(32px, 38px);
+    max-width: 653px;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include resize-txt(14px, 16px);
+  }
 }
 
 .case-page__container {
@@ -24,9 +41,26 @@
   width: 100%;
   margin: 0 auto 60px;
 
+  @media (min-width: $desktop-width) and (max-width: 1170px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 10px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
+
   img {
     margin-bottom: 24px;
     height: 123px;
+
+    @media (max-width: $mobile-width) {
+      width: 218px;
+      height: auto;
+    }
   }
 }
 
@@ -39,6 +73,10 @@
     @include font($raleway, 14px, 18px, 500, normal);
     color: $main-black;
     letter-spacing: 0.15px;
+
+    @media (max-width: $mobile-width) {
+      @include resize-txt(14px, 16px);
+    }
   }
 }
 
@@ -51,12 +89,29 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
   row-gap: 20px;
+  overflow-x: auto;
+
+  @media (min-width: $desktop-width) and (max-width: 1170px) {
+    padding: 0 0 0 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 10px;
+  }
+
+  @media (max-width: $mobile-width) {
+    column-gap: 16px;
+  }
 }
 
 .case-page__item {
 
   a {
     width: 100%;
+
+    @media (max-width: $mobile-width) {
+      min-height: 44px;
+    }
   }
 
   &--active {
@@ -72,5 +127,14 @@
 
   img {
     height: 85px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 218px;
+    height: 76px;
+
+    img {
+      height: auto;
+    }
   }
 }

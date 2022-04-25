@@ -28,6 +28,10 @@
   overflow: hidden;
   position: relative;
 
+  @media (min-width: $desktop-width) and (max-width: 1170px) {
+    margin: 0 auto;
+  }
+
   @media (max-width: $tablet-width) {
     margin-left: 0;
     width: 100%;
