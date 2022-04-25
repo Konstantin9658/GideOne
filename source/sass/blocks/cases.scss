@@ -127,7 +127,7 @@
   width: 386px;
   height: 135px;
   margin-bottom: 24px;
-  background-color: #f0f0f0;
+  background: linear-gradient(90deg, #8d6f11 0%, #957415 26%, #9e8015 100%);
 
   @media (max-width: $mobile-width) {
     width: 218px;
