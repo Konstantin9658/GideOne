@@ -6,56 +6,6 @@
     @include resize-txt(12px, 14px);
   }
 
-  &--order,
-  &--about {
-    width: 209px;
-    min-height: 47px;
-
-    @media (max-width: $mobile-width) {
-      width: 100%;
-      min-height: 31px;
-    }
-  }
-
-  &--order {
-    background: $btn-order;
-    color: $main-white;
-    margin-right: 45px;
-
-    &:hover,
-    &:focus-visible {
-      transition: $trans--300;
-      background: linear-gradient(273.2deg, #1696A7 4.98%, #4AFDCC 156.06%);
-    }
-  }
-
-  &--about {
-    border: 3px solid $cyan;
-    color: $cyan;
-
-    &:hover,
-    &:focus-visible {
-      background: $light-cyan;
-      border: none;
-    }
-  }
-
-  &--callback {
-    width: 333px;
-
-    @media (max-width: $mobile-width) {
-      width: 100%;
-    }
-  }
-
-  &--about,
-  &--order {
-
-    &:active {
-      opacity: 0.5;
-    }
-  }
-
   &--more {
     @include font($raleway, 16px, 19px, 700, normal);
     color: $cyan;
