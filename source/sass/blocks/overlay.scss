@@ -1,6 +1,6 @@
 .overlay {
   position: fixed;
-  transition: $trans--300;
+  transition: opacity .3s ease-in-out;
   opacity: 1;
   top: 0;
   left: 0;
@@ -10,7 +10,6 @@
   z-index: 34;
 
   &--hidden {
-    // display: none;
     opacity: 0;
     z-index: -100;
   }

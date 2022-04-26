@@ -11,12 +11,14 @@
     z-index: 50;
     top: 5%;
     left: 50%;
+    bottom: 5%;
     transform: translateX(-50%);
     max-width: 738px;
     width: calc(100% - 40px);
     background-color: $lime-green;
     border-radius: 50px;
-    min-height: 649px;
+    // min-height: 649px;
+    overflow: auto;
     padding: 0 20px;
   }
 }

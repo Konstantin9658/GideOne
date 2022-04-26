@@ -3,17 +3,29 @@
   text-align: center;
   flex-direction: column;
   align-items: center;
-  max-width: 350px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 78px 0;
+  padding: 50px 0;
 
   p {
     @include font($raleway, 24px, 31px, 700, normal);
     margin: 0;
     color: $very-dark-cyan;
     padding-bottom: 42px;
+    max-width: 350px;
+    width: 100%;
+
+    @media (max-width: $mobile-width) {
+      @include resize-txt(16px, 21px);
+      padding-bottom: 37px;
+
+    }
   }
+}
+
+.form-callback__wrapper {
+  max-width: 370px;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
 }
 
 .form-callback__data-list {
@@ -26,8 +38,8 @@
 .form-callback__data-item {
   margin-bottom: 12px;
 
-  &:last-child {
-    margin-bottom: 24px;
+  @media (max-width: $mobile-width) {
+    margin-bottom: 10px;
   }
 
   input,
@@ -56,5 +68,25 @@
   input::placeholder,
   textarea::placeholder {
     color: $main-black;
+  }
+}
+
+.form-callback__recaptcha {
+  margin: 0 auto 24px;
+
+  iframe {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 304px;
+  }
+
+  div {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 16px;
   }
 }
