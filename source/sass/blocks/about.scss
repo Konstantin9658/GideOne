@@ -3,9 +3,18 @@
   margin-left: 6px;
   margin-bottom: 48px;
   display: flex;
+  position: relative;
+
+  @media (max-width: 1210px) {
+    flex-direction: column;
+
+    img {
+      width: 549px;
+      margin: 0 auto;
+    }
+  }
 
   @media (max-width: $tablet-width) {
-    flex-direction: column;
     margin: 87px 0 82px;
 
     img {
@@ -23,12 +32,49 @@
   }
 }
 
+.about__video {
+  position: relative;
+  display: flex;
+
+  iframe {
+    width: 542px;
+    height: 382px;
+    position: absolute;
+    flex-grow: 1;
+    border-radius: 12px;
+    top: 21px;
+    left: 22px;
+  }
+
+  @media (max-width: 1210px) {
+    margin: 0 auto;
+
+    iframe {
+      width: 512px;
+      height: 358px;
+      top: 20px;
+      left: 18px;
+    }
+  }
+
+  @media (max-width: 550px) {
+
+    iframe {
+      width: 90vw;
+      height: 66vw;
+      top: 9px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
 .about__desc {
   margin-left: 80px;
-  width: 500px;
+  max-width: 500px;
   margin-top: 8px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: 1210px) {
     order: -1;
     max-width: 633px;
     width: 100%;
