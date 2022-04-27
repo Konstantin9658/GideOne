@@ -5,6 +5,7 @@
 
   &--show {
     transition: $trans--300;
+    background-color: $lime-green;
     opacity: 1;
     display: block;
     position: fixed;
@@ -15,10 +16,12 @@
     transform: translateX(-50%);
     max-width: 738px;
     width: calc(100% - 40px);
-    background-color: $lime-green;
     border-radius: 50px;
-    // min-height: 649px;
-    overflow: auto;
     padding: 0 20px;
+    overflow: hidden;
+
+    @media (max-width: $mobile-width) {
+      border-radius: 20px;
+    }
   }
 }

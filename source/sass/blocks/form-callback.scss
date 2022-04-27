@@ -23,9 +23,17 @@
 
 .form-callback__wrapper {
   max-width: 370px;
+  position: fixed;
   width: 100%;
-  padding: 10px;
-  margin: 0 auto;
+  height: 70%;
+  padding: 10px 10px 50px;
+  margin: 100px auto 0;
+  overflow-y: scroll;
+
+  @media (max-width: $mobile-width) {
+    padding: 10px 20px 30px;
+    margin: 60px auto 0;
+  }
 }
 
 .form-callback__data-list {
