@@ -92,7 +92,7 @@
   overflow-x: auto;
 
   @media (min-width: $desktop-width) and (max-width: 1170px) {
-    padding: 0 0 0 20px;
+    padding: 0 20px;
   }
 
   @media (max-width: $tablet-width) {

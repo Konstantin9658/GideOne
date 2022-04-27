@@ -43,6 +43,10 @@
     width: 30px;
     height: 30px;
     position: absolute;
+
+    @media (max-width: $mobile-width) {
+      right: 20px;
+    }
   }
 
   &--form {
