@@ -33,14 +33,18 @@
 .footer__link {
   position: absolute;
   right: 30px;
-  bottom: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 
   img {
-    width: 100px;
+    width: 130px;
   }
 
   @media (max-width: $mobile-width) {
     right: 10px;
+    bottom: 10px;
+    transform: none;
+    top: auto;
 
     img {
       width: 55px;
