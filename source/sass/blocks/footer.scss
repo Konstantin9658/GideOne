@@ -2,6 +2,7 @@
   flex: 0 0 auto;
   min-height: 266px;
   background-color: $dark-cyan;
+  position: relative;
 
   @media (max-width: $tablet-width) {
     min-height: 257px;
@@ -26,6 +27,24 @@
     @include font($raleway, 14px, 16px, 700, normal);
     text-align: center;
     @include hover;
+  }
+}
+
+.footer__link {
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+
+  img {
+    width: 100px;
+  }
+
+  @media (max-width: $mobile-width) {
+    right: 10px;
+
+    img {
+      width: 55px;
+    }
   }
 }
 
