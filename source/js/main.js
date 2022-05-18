@@ -172,6 +172,8 @@ form.addEventListener('submit', (evt) => {
       data.append(pair[0], pair[1]);
   }
 
+  data.append('getStatus', 'true');
+
   fetch(URL, {
       method: 'post',
       body: data,
