@@ -81,6 +81,11 @@
 
 .form-callback__recaptcha {
   margin: 0 auto 24px;
+  display: none;
+
+  &--show {
+    display: block;
+  }
 
   iframe {
     margin: 0 auto;
