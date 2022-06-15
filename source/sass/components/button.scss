@@ -77,6 +77,10 @@
   &--callback {
     width: 333px;
     min-height: 49px;
+
+    @media (max-width: $tablet-width) {
+      width: 100%;
+    }
   }
 
   &--order,

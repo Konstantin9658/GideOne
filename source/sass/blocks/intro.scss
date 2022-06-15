@@ -110,6 +110,7 @@
 
 .intro__wrapper {
   padding-top: 71px;
+  padding-bottom: 40px;
   margin-left: 70px;
   position: relative;
   z-index: 2;
@@ -118,10 +119,12 @@
     margin-left: 0;
     text-align: center;
     padding-top: 54px;
+    padding-bottom: 30px;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 9px;
+    padding-bottom: 20px;
   }
 }
 
@@ -194,9 +197,5 @@
     flex-direction: column;
     max-width: 463px;
     padding: 0 5px;
-
-    a {
-      margin-bottom: 12px;
-    }
   }
 }

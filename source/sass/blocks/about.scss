@@ -66,7 +66,7 @@
   }
 }
 
-.about__desc {
+.about__description {
   margin-left: 80px;
   max-width: 500px;
   margin-top: 8px;
@@ -84,37 +84,15 @@
   }
 
   h2 {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 
     @media (max-width: $tablet-width) {
-      padding-bottom: 40px;
-    }
-
-    @media (max-width: $mobile-width) {
-      padding-bottom: 29px;
-    }
-  }
-
-  blockquote {
-    margin: 0;
-    padding: 0;
-    @include font($raleway, 14px, 20px, 800, normal);
-    color: $light-red;
-    letter-spacing: 0.1px;
-    padding-bottom: 50px;
-
-    @media (max-width: $tablet-width) {
-      padding-bottom: 44px;
-    }
-
-    @media (max-width: $mobile-width) {
-      @include resize-txt(14px, 18px);
-      padding-bottom: 24px;
+      padding-bottom: 30px;
     }
   }
 }
 
-.about__description {
+.about__text {
   @include font($raleway, 14px, 18px, 500, normal);
   color: $main-black;
   margin: 0;
@@ -127,5 +105,19 @@
   @media (max-width: $mobile-width) {
     padding: 0 5px;
   }
-}
 
+  span {
+    display: block;
+    font-weight: 900;
+    color: $light-red;
+    padding-bottom: 40px;
+
+    @media (max-width: $tablet-width) {
+      padding-bottom: 30px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 20px;
+    }
+  }
+}
